@@ -17,9 +17,10 @@ public class Interact : MonoBehaviour {
 
                 // Do something with the object that was hit by the raycast.
                 print((objectHit.gameObject.name));
-                if (objectHit.gameObject.name == "Interact")
-                {
-                    Destroy(hit.transform.gameObject);
+                if (objectHit.gameObject.CompareTag("Interactable"))
+                {   
+                    objectHit.SendMessage("RunInteractCode");
+                  //  Destroy(hit.transform.gameObject);
                 }
             }
       
