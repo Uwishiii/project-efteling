@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class FirstPersonMovement : MonoBehaviour
@@ -22,17 +21,10 @@ public class FirstPersonMovement : MonoBehaviour
     {
         // Get the rigidbody on this.
         rigidbody = GetComponent<Rigidbody>();
-        
-    }
-
-    private void Start()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void FixedUpdate()
     {
-       
         // Update IsRunning from input.
         IsRunning = canRun && Input.GetKey(runningKey);
 
